@@ -1,0 +1,89 @@
+.nav-bar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "logo links"
+      "menu-mobile menu-mobile"
+      ;
+    align-items: center;
+    padding: 20px;
+
+    .logo {
+      grid-area: logo;
+    }
+
+    .links {
+      grid-area: links;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        margin-right: 20px;
+        cursor: pointer;
+        
+        &:hover {
+          color: #9164CC;
+        }
+      }
+
+    }
+    
+    .icon-menu-mobile{
+        display: none;
+    }
+    .open{
+        display: none;
+    }
+    .close{
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      align-items: stretch;
+      .links {
+        justify-content: center;
+        margin-top: 20px;
+
+      }
+      .open{
+        display: none;
+      }
+    }
+    @media screen and (max-width: 580px) {
+        grid-template-columns: 1fr;
+        align-items: center;
+        .links {
+            display: none;
+        }
+        .open{
+            background-color: red;
+            display: flex;
+        }
+        .icon-menu-mobile{
+            display: block;
+            cursor: pointer;
+        }
+        .menu-mobile {
+            grid-area: menu-mobile;
+            background-color: rgb(208, 208, 208);
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+      
+            a {
+              margin: 10px;
+              color: #333;
+              text-decoration: none;
+              transition: color 0.3s ease;
+              
+              &:hover {
+                color: #9164CC;
+              }
+            }
+          }
+
+    }
+  }
