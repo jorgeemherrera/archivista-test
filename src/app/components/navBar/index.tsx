@@ -1,19 +1,10 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
-import menu from '../../../public/menu.png';
-
-import './navBar.scss'
+import Image from "next/image";
+import menu from '@/../public/menu.png';
+import { NavBarProps } from "@/app/data/navBarProps";
 import { useState } from "react";
+import './navBar.scss'
 
-
-interface NavBarProps {
-  image: StaticImageData;
-  alt: string;
-  width: number;
-  height: number;
-  firstLink: string;
-  secondLink: string;
-}
 
 export default function NavBar({
   image,
@@ -28,6 +19,7 @@ export default function NavBar({
     <nav className="nav-bar">
       <div className="logo">
         <Image
+          className="image-logo"
           src={image}
           alt={alt}
           width={width}
@@ -35,7 +27,7 @@ export default function NavBar({
         />
       </div>
       <div className="links">
-        <a>{firstLink}</a>
+        <a className="first-link" >{firstLink}</a>
         <a>{secondLink}</a>
       </div>
       <div className='icon-menu-mobile' onClick={() => setIsOpen(!isOpen)}>

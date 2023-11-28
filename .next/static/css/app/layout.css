@@ -1,7 +1,16 @@
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/globals.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+}
 
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[12].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -71,26 +80,34 @@
 }.__className_e66fe9 {font-family: '__Inter_e66fe9', '__Inter_Fallback_e66fe9';font-style: normal
 }
 
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/navBar/navBar.scss ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/components/navBar/navBar.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .nav-bar {
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas: "logo links" "menu-mobile menu-mobile";
   align-items: center;
   padding: 20px;
+  box-shadow: 0px 3px 5px 0px rgba(140, 152, 164, 0.25);
 }
 .nav-bar .logo {
   grid-area: logo;
+}
+.nav-bar .logo .image-logo {
+  margin-left: 60px;
 }
 .nav-bar .links {
   grid-area: links;
   display: flex;
   justify-content: space-between;
+  margin-right: 58px;
+}
+.nav-bar .links .first-link {
+  margin-right: 44px;
 }
 .nav-bar .links a {
-  color: #333;
+  color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
   margin-right: 20px;
@@ -121,7 +138,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 700px) {
   .nav-bar {
     grid-template-columns: 1fr;
     align-items: center;
@@ -130,7 +147,6 @@
     display: none;
   }
   .nav-bar .open {
-    background-color: red;
     display: flex;
   }
   .nav-bar .icon-menu-mobile {
@@ -139,14 +155,14 @@
   }
   .nav-bar .menu-mobile {
     grid-area: menu-mobile;
-    background-color: rgb(208, 208, 208);
+    background-color: #EAEAEA;
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
   .nav-bar .menu-mobile a {
     margin: 10px;
-    color: #333;
+    color: #000;
     text-decoration: none;
     transition: color 0.3s ease;
   }

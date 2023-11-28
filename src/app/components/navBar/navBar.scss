@@ -1,3 +1,5 @@
+@import '../../variables/variables.colors';
+
 .nav-bar {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -7,24 +9,32 @@
       ;
     align-items: center;
     padding: 20px;
+    box-shadow:  0px 3px 5px 0px rgba(140, 152, 164, 0.25);
 
     .logo {
       grid-area: logo;
+      .image-logo{
+        margin-left: 60px;
+      }
     }
 
     .links {
       grid-area: links;
       display: flex;
       justify-content: space-between;
+      margin-right: 58px;
+      .first-link{
+        margin-right: 44px;
+      }
       a {
-        color: #333;
+        color: $font-black;
         text-decoration: none;
         transition: color 0.3s ease;
         margin-right: 20px;
         cursor: pointer;
         
         &:hover {
-          color: #9164CC;
+          color: $main-purple-primary;
         }
       }
 
@@ -52,14 +62,13 @@
         display: none;
       }
     }
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 700px) {
         grid-template-columns: 1fr;
         align-items: center;
         .links {
             display: none;
         }
         .open{
-            background-color: red;
             display: flex;
         }
         .icon-menu-mobile{
@@ -68,19 +77,19 @@
         }
         .menu-mobile {
             grid-area: menu-mobile;
-            background-color: rgb(208, 208, 208);
+            background-color: $background-gray;
             flex-direction: column;
             align-items: center;
             padding: 20px;
       
             a {
               margin: 10px;
-              color: #333;
+              color: $font-black;
               text-decoration: none;
               transition: color 0.3s ease;
               
               &:hover {
-                color: #9164CC;
+                color: $main-purple-primary;
               }
             }
           }
