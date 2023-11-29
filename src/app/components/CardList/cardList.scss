@@ -1,0 +1,53 @@
+@import '../../variables/variables.colors';
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 67px;
+    .container-second-content-card{
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        padding: 0 12px 0 13px;
+        justify-items: center;
+        min-height: 84px;
+        align-items: center;
+        .container-second-content-card-text{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+    .title-card-list {
+        max-width: 200px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        color: $font-black;
+    }
+    .record-id {
+        max-width: 200px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        color: $font-gray;
+        line-height: normal; 
+    }
+    @media screen and (max-width: 940px) {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    @media screen and (max-width: 696px) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import menu from '@/../public/menu.png';
-import { NavBarProps } from "@/app/data/navBarProps";
+import { NavBarProps } from "@/app/interface/navBarProps";
 import { useState } from "react";
 import './navBar.scss'
 

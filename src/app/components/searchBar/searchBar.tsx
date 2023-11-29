@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import './searchBar.scss'
-import { searchBarProps } from '@/app/data/searchBarProps';
+import { searchBarProps } from '@/app/interface/searchBarProps';
 
 
 export default function SearchBar({
