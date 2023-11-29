@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import NavBar from './components/navBar'
-import RecordList from './components/RecordList'
 import logoImage from '../../public/EternalRecordsLogo.png'
 import './globals.scss'
 
@@ -26,7 +25,6 @@ export default function RootLayout({
           secondLink='Galleries'
         />
         {children}
-        {/* <RecordList></RecordList> */}
       </body>
     </html>
   )

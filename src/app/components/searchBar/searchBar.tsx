@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import './searchBar.scss'
 import { searchBarProps } from '@/app/interface/searchBarProps';
+import { useState } from 'react';
 
 
 export default function SearchBar({
@@ -13,8 +14,16 @@ export default function SearchBar({
     height,
     placeholder,
     iconGrid,
-    iconColumn
+    iconColumn,
+    onChangeView
 }: searchBarProps) {
+    
+    const [view, setView] = useState('list');
+
+    const onClickView = ( nuevaVista:any) => {
+        setView(nuevaVista);
+    };
+
     return (
         <section className='section-search-bar'>
             <div className='title-search'>
@@ -31,14 +40,22 @@ export default function SearchBar({
             </div>
             <div className='images-order'>
                 <Image 
-                    className='icon-column-image'
+                    onClick={() => {
+                        onClickView('list');
+                        onChangeView('list');
+                    }}
+                    className={`icon-column-image ${view === 'list' ? "active" : "inactive"}`}
                     src={iconColumn}
                     alt={alt}
                     width={width}
                     height={height}
                 />
                 <Image
-                    className='icon-grid-image'
+                    onClick={() => {
+                        onClickView('cards');
+                        onChangeView('cards'); 
+                    }}
+                    className={`icon-grid-image ${view === 'cards' ? "active" : "inactive"}`}
                     src={iconGrid}
                     alt={alt}
                     width={width}

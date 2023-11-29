@@ -1,9 +1,9 @@
 import { StaticImageData } from "next/image";
 
 export interface moreDetailsProps {
-    status: string;
-    title: string;
+    content?: string;
     description: string;
     image: StaticImageData;
-    content?: string;
+    status: string;
+    title: string;
 }
