@@ -2,19 +2,19 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/components/searchBar/searchBar.scss ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .section-search-bar {
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
   justify-items: center;
   width: 80%;
 }
 .section-search-bar .title-search {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-items: stretch;
+  display: grid;
   grid-gap: 20px;
   gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: stretch;
 }
 .section-search-bar .title-search h1 {
   font-size: 30px;
@@ -33,41 +33,41 @@
   position: absolute;
 }
 .section-search-bar .title-search .search-bar-parent .input-field-search {
-  border: none;
-  border-radius: 5px;
   background: #EAEAEA;
-  min-width: 320px;
+  border-radius: 5px;
+  border: none;
   height: 36px;
+  min-width: 320px;
   padding: 5px 7px 7px 7px;
 }
 .section-search-bar .title-search .search-bar-parent .input-field-search:focus-visible {
-  outline: 2px solid #9164CC;
   border-radius: 3px;
+  outline: 2px solid #9164CC;
 }
 .section-search-bar .images-order {
   display: flex;
-  width: 100%;
   justify-content: flex-end;
+  width: 100%;
 }
 .section-search-bar .images-order .icon-column-image {
-  border: 2px solid #9164CC;
   border-radius: 50%;
-  padding: 10px;
-  margin: 10px;
+  border: 2px solid #9164CC;
   cursor: pointer;
+  margin: 10px;
+  padding: 10px;
 }
 .section-search-bar .images-order .icon-grid-image {
-  cursor: pointer;
   background-color: #9164CC;
-  border: 2px solid #9164CC;
   border-radius: 50%;
-  padding: 10px;
+  border: 2px solid #9164CC;
+  cursor: pointer;
   margin: 10px;
+  padding: 10px;
 }
 @media screen and (max-width: 940px) {
   .section-search-bar {
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
   }
   .section-search-bar .images-order {
     justify-content: space-between;
@@ -75,8 +75,8 @@
 }
 @media screen and (max-width: 677px) {
   .section-search-bar .title-search {
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     justify-items: center;
   }
 }
@@ -84,8 +84,8 @@
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[12].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[12].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[12].oneOf[13].use[5]!./src/app/page.scss ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .main-records {
-  margin-top: 77px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 77px;
 }

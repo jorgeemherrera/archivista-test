@@ -1,15 +1,12 @@
 @import '../../variables/variables.colors';
 
 .nav-bar {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "logo links"
-      "menu-mobile menu-mobile"
-      ;
     align-items: center;
-    padding: 20px;
     box-shadow:  0px 3px 5px 0px rgba(140, 152, 164, 0.25);
+    display: grid;
+    grid-template-areas: "logo links" "menu-mobile menu-mobile";
+    grid-template-columns: 1fr auto;
+    padding: 20px;
 
     .logo {
       grid-area: logo;
@@ -19,8 +16,8 @@
     }
 
     .links {
-      grid-area: links;
       display: flex;
+      grid-area: links;
       justify-content: space-between;
       margin-right: 58px;
       .first-link{
@@ -28,10 +25,10 @@
       }
       a {
         color: $font-black;
+        cursor: pointer;
+        margin-right: 20px;
         text-decoration: none;
         transition: color 0.3s ease;
-        margin-right: 20px;
-        cursor: pointer;
         
         &:hover {
           color: $main-purple-primary;
@@ -51,20 +48,19 @@
     }
 
     @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
       align-items: stretch;
+      grid-template-columns: 1fr;
       .links {
         justify-content: center;
         margin-top: 20px;
-
       }
       .open{
         display: none;
       }
     }
     @media screen and (max-width: 700px) {
-        grid-template-columns: 1fr;
         align-items: center;
+        grid-template-columns: 1fr;
         .links {
             display: none;
         }
@@ -76,15 +72,15 @@
             cursor: pointer;
         }
         .menu-mobile {
-            grid-area: menu-mobile;
+            align-items: center;
             background-color: $background-gray;
             flex-direction: column;
-            align-items: center;
+            grid-area: menu-mobile;
             padding: 20px;
       
             a {
-              margin: 10px;
               color: $font-black;
+              margin: 10px;
               text-decoration: none;
               transition: color 0.3s ease;
               
