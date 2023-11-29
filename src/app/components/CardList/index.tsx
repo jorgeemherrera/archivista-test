@@ -9,6 +9,7 @@ import artBoard from '@/../public/Artboard.png'
 import './cardList.scss'
 import Image from 'next/image';
 import Link from 'next/link';
+import { formatDate } from '../../utils/dateUtils';
 
 
 
@@ -33,7 +34,7 @@ export default function CardList({ data }: any) {
                     {item.metadata.title}
                   </Typography>
                   <Typography className='record-id' variant="body2" color="text.secondary">
-                    Eternal Record {item.createdAt}
+                    Eternal Record {formatDate(item.createdAt)}
                   </Typography>
                 </Container>
                 <Image

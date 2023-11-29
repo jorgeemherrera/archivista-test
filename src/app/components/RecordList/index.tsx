@@ -4,27 +4,32 @@ import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import data from '@/app/api/data.json';
 import { Container } from '@mui/material';
 import './recordList.scss'
-
-
+import { formatDate } from '../../utils/dateUtils';
 
 const columns: GridColDef[] = [
   {
-    field: 'image', headerName: 'Record Title', width: 150, 
     align: 'center',
+    disableColumnMenu: false,
+    field: 'image',
     headerAlign: 'right',
-    sortable:false,
-    disableColumnMenu:false,
+    headerName: 'Record Title',
+    sortable: false,
+    width: 150,
     valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.metadata.image || ''}`, renderCell: (params) => <img width={52} height={43} src={params.value} />, 
-      
+      `${params.row.metadata.image || ''}`, renderCell: (params) => <img width={52} height={43} src={params.value} alt={params.value} />,
   },
   {
-    field: 'title', headerName: '', width: 750, sortable: false,
+    field: 'title',
+    headerName: '',
+    width: 750, 
+    sortable: false,
     valueGetter: (params: GridValueGetterParams) =>
       `${params.row.metadata.title || ''}`,
   },
   { field: 'status', headerName: 'Status', width: 250 },
-  { field: 'createdAt', headerName: 'Date', width: 250, sortable: false },
+  { field: 'createdAt', headerName: 'Date', width: 250, sortable: false,
+    valueGetter: (params: GridValueGetterParams) =>
+    `${formatDate(params.row.createdAt) || ''}`, },
 ];
 
 export default function DataTable({ data }: any) {
