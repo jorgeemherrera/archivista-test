@@ -60,9 +60,11 @@ export default function MoreDetails({ dataRecords }: any) {
                             {metadataItem.description}
                         </Container>
                         <Container>
-                            <hr></hr>
+                       <hr></hr>
+                        </Container>
+                        <Container maxWidth="lg">
                             <Image
-                                className="image-logo"
+                                className="logo-footer"
                                 src={logoImage}
                                 alt='logo-image'
                                 width={253}

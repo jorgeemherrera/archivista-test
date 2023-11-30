@@ -1,13 +1,13 @@
-@import '../../variables/variables.colors';
+@import "../../variables/variables.colors";
 
-.section-search-bar{
+.section-search-bar {
     align-items: center;
     display: grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     width: 80%;
 
-    .title-search{
+    .title-search {
         align-items: center;
         display: grid;
         gap: 20px;
@@ -23,65 +23,62 @@
 
         .search-bar-parent {
             width: 100%;
-            .input-field-search{
+            .input-field-search {
                 text-align: center;
             }
             img {
                 margin: 7px;
                 position: absolute;
             }
-            .input-field-search{
-                background: $background-gray;
-                border-radius: 5px;
-                border: none;
+            .input-field-search {
+                background: #ffffff;
+                border-radius: 25px;
+                border: 1px solid $main-purple-primary;
                 height: 36px;
                 min-width: 320px;
-                padding: 5px 7px 7px 7px;
+                padding: 7px;
+                &:focus-visible {
+                    border-radius: 25px;
+                    outline: 2px solid $main-purple-primary;
+                }
             }
-            .input-field-search:focus-visible {
-                border-radius: 3px;
-                outline: 2px solid $main-purple-primary;
-              }
         }
     }
-    .images-order{
+    .images-order {
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        .icon-column-image, .icon-grid-image {
+        .icon-column-image,
+        .icon-grid-image {
             border-radius: 50%;
             cursor: pointer;
             height: 24px;
             padding: 5px;
             width: 24px;
             margin: 8px;
-        }
-        .icon-column-image{
-            border:2px solid $main-purple-primary;
-        }
-        .icon-grid-image{
-            background-color: $main-purple-primary;
-            border-radius: 50%;
             border: 2px solid $main-purple-primary;
         }
-        .active{
+        .icon-grid-image {
+            background-color: $main-purple-primary;
+            border-radius: 50%;
+        }
+        .active {
             box-shadow: 0px 0px 5px 1px #878787;
         }
     }
 
-    @media screen and (max-width: 940px) {   
-        grid-template-columns:1fr;
-        grid-template-rows:repeat(2,1fr);
+    @media screen and (max-width: 940px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
         .images-order {
             justify-content: space-between;
         }
     }
-    @media screen and (max-width: 677px) {   
+    @media screen and (max-width: 677px) {
         .title-search {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(2, 1fr);
             justify-items: center;
         }
-    }  
+    }
 }
- 

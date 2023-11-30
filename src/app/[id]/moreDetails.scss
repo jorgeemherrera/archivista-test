@@ -51,6 +51,12 @@
             max-width: 664px;
         }
     }
+
+    .logo-footer {
+        margin: 1.5rem auto;
+        position: relative;
+        right: 16%;
+    }
     .section-content{
         align-items: center;
         display: flex;
@@ -68,6 +74,9 @@
     .last-paragraph-content{
         grid-area: last-paragraph;
         margin-right: 50px;
+    }
+    hr {
+        width: 100vw;
     }
     @media screen and (max-width: 830px) {
         .section-content {
