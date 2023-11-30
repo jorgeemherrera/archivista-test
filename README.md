@@ -72,10 +72,8 @@ Run the unit tests using:
 - You can select one of them in the list/card view and go to detail page of each one
 - In the navbar you can switch between **Light/Dark** theme
 
-```bash
    Vercel App deploy
    Open [archivista-test.vercel.app](https://archivista-test.vercel.app/) on your browser to view the app on deploy.
-   ```
 
 ### Project Structure
 
