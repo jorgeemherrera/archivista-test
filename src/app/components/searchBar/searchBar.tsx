@@ -40,6 +40,7 @@ export default function SearchBar({
                         alt={alt}
                         width={width}
                         height={height}
+                        data-testid="icon"
                     />
                     <input className="input-field-search" type="search" onChange={handleInputChange} placeholder={placeholder} />
                 </div>
@@ -55,6 +56,7 @@ export default function SearchBar({
                     alt={alt}
                     width={width}
                     height={height}
+                    data-testid="list-icon"
                 />
                 <Image
                     onClick={() => {
@@ -66,6 +68,7 @@ export default function SearchBar({
                     alt={alt}
                     width={width}
                     height={height}
+                    data-testid="grid-icon"
                 />
             </div>
 
