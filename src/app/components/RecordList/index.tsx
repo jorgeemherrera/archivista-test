@@ -1,7 +1,6 @@
 'use client'
 import * as React from 'react';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import data from '@/app/api/data.json';
 import { Container } from '@mui/material';
 import './recordList.scss'
 import { formatDate } from '../../utils/dateUtils';
@@ -9,6 +8,7 @@ import mintingImage from '@/../public/Minting.png';
 import draftImage from '@/../public/Draft.png';
 import certifiedImage from '@/../public/Artboard.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const columns: GridColDef[] = [
   {
@@ -27,8 +27,10 @@ const columns: GridColDef[] = [
     field: 'title',
     headerName: '',
     width: 750,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.metadata.title || ''}`,
+    sortable: false,
+    renderCell: (params) => (
+      <Link href={`${params.row.id}`}>{params.row.metadata.title}</Link>
+    )
   },
   {
     field: 'status', headerName: 'Status', width: 250,

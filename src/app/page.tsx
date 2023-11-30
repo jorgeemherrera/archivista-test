@@ -3,13 +3,13 @@ import SearchBar from "./components/searchBar/searchBar";
 import searchIcon from '@/../public/search.png'
 import gridIcon from '@/../public/grid.svg'
 import columnIcon from '@/../public/list.png'
+import './page.scss'
 import CardList from "./components/CardList";
 import data from '@/app/api/data.json'
 import DataTable from "./components/RecordList";
 import { useState } from "react";
 import { Container } from "@mui/material";
 import { formatDate } from "./utils/dateUtils";
-import './page.scss'
 
 export default function Home() {
   const [view, setView] = useState('list');

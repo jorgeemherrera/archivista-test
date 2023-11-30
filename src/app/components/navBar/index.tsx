@@ -4,6 +4,7 @@ import menu from '@/../public/menu.png';
 import { NavBarProps } from "@/app/interface/navBarProps";
 import { useState } from "react";
 import './navBar.scss'
+import Link from "next/link";
 
 
 export default function NavBar({
@@ -18,13 +19,15 @@ export default function NavBar({
   return (
     <nav className="nav-bar">
       <div className="logo">
-        <Image
-          className="image-logo"
-          src={image}
-          alt={alt}
-          width={width}
-          height={height}
-        />
+        <Link href={'/'}>
+          <Image
+            className="image-logo"
+            src={image}
+            alt={alt}
+            width={width}
+            height={height}
+          />
+        </Link>
       </div>
       <div className="links">
         <a className="first-link" >{firstLink}</a>

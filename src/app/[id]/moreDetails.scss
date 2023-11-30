@@ -1,49 +1,49 @@
 .main-section-more-details{
-    margin: 20px;
     display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-columns: repeat(2,1fr);
-    height: calc(100vh - 10px);
     grid-template-areas: 
     "record-box record-box"
     "title title"
     "section-content section-content"
     "video-section video-section"
     "last-paragraph last-paragraph";
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: calc(100vh - 10px);
+    margin: 20px;
     gap: 65px;
     .record-box-certified{
-        padding: 23px 46px 22px 43px;
+        align-items: center;
         border-radius: 10px;
         border: 2px dashed #000;
-        max-height: 92px;
-        grid-area: record-box;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        grid-area: record-box;
         justify-content: space-between;
         margin-bottom: 22px;
+        max-height: 92px;
+        padding: 23px 46px 22px 43px;
         .button-box-certified{
             background-color: #000;
+            height: 42px;
             padding: 10px 22px;
             text-transform: none;
             width: 154px;
-            height: 42px;
         }
         .certified-text{
-            margin: 0;
             font-size: 25px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
             margin-right: 15px;
+            margin: 0;
         }
     }
     .title-div-more-details{
-        grid-area: title;
+        align-items: center;
         display: flex;
+        grid-area: title;
         max-height: 104px;
         padding: 0;
-        align-items: center;
         .image-title{
             margin-right: 27px;
         }
@@ -52,9 +52,9 @@
         }
     }
     .section-content{
-        grid-area: section-content;
-        display: flex;
         align-items: center;
+        display: flex;
+        grid-area: section-content;
         justify-content: space-between;
         padding: 0;
         .paragraph-content{
@@ -74,8 +74,8 @@
             flex-direction: column;
         }
         .paragraph-content {
-            margin-right: 0 !important;
             margin-bottom: 50px;
+            margin-right: 0 !important;
             text-align: justify;
         }
     }

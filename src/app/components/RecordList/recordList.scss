@@ -1,25 +1,28 @@
-.container-table{
-    padding: 0;
+.container-table {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+    margin: 0;
     margin: 0;
     min-width: 1500px;
     padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-    .data-grid{
+    padding: 0;
+    .data-grid {
         border: 0;
     }
-    .container-status-cell{
+    .container-status-cell {
+        align-items: center;
         display: flex;
         flex-direction: row;
-        align-items: center;
         padding: 0;
-        span{
+        span {
             margin-left: 6px;
             text-transform: capitalize;
         }
+    }
+    a:-webkit-any-link {
+        color: black;
     }
 }
