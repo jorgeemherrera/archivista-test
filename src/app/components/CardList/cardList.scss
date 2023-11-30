@@ -5,49 +5,52 @@
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 67px;
-    .container-second-content-card{
-        align-items: center;
-        display: grid;
-        grid-template-columns: 6fr 1fr;
-        justify-items: center;
-        min-height: 84px;
-        padding: 0 12px 0 13px;
-        .container-second-content-card-text{
-            display: flex;
-            flex-direction: column;
-            padding: 0;
+    .link-card{
+        text-decoration: none;
+        .container-second-content-card{
+            align-items: center;
+            display: grid;
+            grid-template-columns: 6fr 1fr;
+            justify-items: center;
+            min-height: 84px;
+            padding: 0 12px 0 13px;
+            .container-second-content-card-text{
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
         }
-    }
-    .title-card-list {
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        color: $font-black;
-        display: -webkit-box;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        max-width: 200px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .record-id {
-        color: $font-gray;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal; 
-        max-width: 200px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    @media screen and (max-width: 940px) {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
-    @media screen and (max-width: 696px) {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        .title-card-list {
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            color: $font-black;
+            display: -webkit-box;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .record-id {
+            color: $font-gray;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal; 
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        @media screen and (max-width: 940px) {
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+        }
+        @media screen and (max-width: 696px) {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
     }
 }

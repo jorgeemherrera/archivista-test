@@ -1,8 +1,10 @@
+'use client'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import NavBar from './components/navBar'
 import logoImage from '../../public/EternalRecordsLogo.png'
 import './globals.scss'
+import { useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,9 +15,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [theme, seTheme] = useState()
+  const changeThemeStatus = (state:any) =>{
+    seTheme(state)
+  } 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${theme ?  "dark":"light"}`}>
         <NavBar
           image={logoImage}
           alt='alt'
@@ -23,6 +29,7 @@ export default function RootLayout({
           height={55}
           firstLink='Records'
           secondLink='Galleries'
+          changeTheme={changeThemeStatus}
         />
         {children}
       </body>

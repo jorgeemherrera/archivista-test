@@ -7,4 +7,5 @@ export interface NavBarProps {
     image: StaticImageData;
     secondLink: string;
     width: number;
+    changeTheme?:any;
 }

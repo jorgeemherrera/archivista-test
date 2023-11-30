@@ -18,8 +18,8 @@ export default function CardList({ data }: any) {
   return (
     <Container className="card-container">
       {recordsData.map((item: any) => (
-        <Link href={item.id}>
-          <Card key={item.id} sx={{ maxWidth: 345 }} className="single-card">
+        <Link className='link-card' href={item.id} key={item.id}>
+          <Card sx={{ maxWidth: 345 }} className="single-card">
             <CardActionArea>
               <CardMedia
                 component="img"

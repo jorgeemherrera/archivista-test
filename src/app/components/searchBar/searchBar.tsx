@@ -50,7 +50,7 @@ export default function SearchBar({
                         onClickView('list');
                         onChangeView('list');
                     }}
-                    className={`icon-column-image ${view === 'list' ? "active" : "inactive"}`}
+                    className={`icon-column-image list ${view === 'list' ? "active" : "inactive"}`}
                     src={iconColumn}
                     alt={alt}
                     width={width}

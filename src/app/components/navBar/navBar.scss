@@ -20,11 +20,11 @@
       grid-area: links;
       justify-content: space-between;
       margin-right: 58px;
+      align-items: center;
       .first-link{
         margin-right: 44px;
       }
       a {
-        color: $font-black;
         cursor: pointer;
         margin-right: 20px;
         text-decoration: none;

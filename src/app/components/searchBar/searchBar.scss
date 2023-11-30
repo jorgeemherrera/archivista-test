@@ -56,6 +56,16 @@
             padding: 5px;
             width: 24px;
             margin: 8px;
+        }
+        .icon-column-image{
+            border:2px solid $main-purple-primary;
+        }
+        .list{
+            background: $background-white;
+        }
+        .icon-grid-image{
+            background-color: $main-purple-primary;
+            border-radius: 50%;
             border: 2px solid $main-purple-primary;
         }
         .icon-grid-image {

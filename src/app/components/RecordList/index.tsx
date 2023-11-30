@@ -21,7 +21,8 @@ const columns: GridColDef[] = [
     
     width: 150,
     valueGetter: (params: GridValueGetterParams) =>
-      `${params.row.metadata.image || ''}`, renderCell: (params) => <img width={52} height={43} src={params.value} alt={params.value} />,
+      `${params.row.metadata.image || ''}`, 
+      renderCell: (params) => <img width={52} height={43} src={params.value} alt={params.value} />,
   },
   {
     field: 'title',
@@ -53,8 +54,7 @@ const columns: GridColDef[] = [
   },
   {
     field: 'createdAt', headerName: 'Date', width: 250,
-    valueGetter: (params: GridValueGetterParams) =>
-      `${formatDate(params.row.createdAt) || ''}`,
+      renderCell: (params) => <p className='date'>{formatDate(params.row.createdAt)}</p>,
   },
 ];
 

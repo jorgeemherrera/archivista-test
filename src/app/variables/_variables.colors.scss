@@ -1,4 +1,23 @@
-$background-gray: #EAEAEA;
-$font-black: #000;
-$font-gray: #969191;
+// $background-gray: #EAEAEA;
+// $font-black: #000;
+// $font-gray: #969191;
+// $main-purple-primary: #9164CC;
+
 $main-purple-primary: #9164CC;
+$font-gray: #969191;
+$font-black: #000;
+$background-gray: #EAEAEA;
+$background-white: #ffff;
+$background-purple-table: rgb(255, 255, 255);
+
+@mixin theme($light-theme: true) {
+    @if $light-theme {
+        background: lighten($main-purple-primary, 100%);
+        background: lighten($background-purple-table, 100%);
+        color: darken($font-black, 100%);
+    } @else {
+        background: darken($main-purple-primary, 100%);
+        background: darken($background-purple-table, 100%);
+        color: lighten($font-black, 100%);
+    }
+}
