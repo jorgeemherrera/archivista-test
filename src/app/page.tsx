@@ -3,20 +3,33 @@ import SearchBar from "./components/searchBar/searchBar";
 import searchIcon from '@/../public/search.png'
 import gridIcon from '@/../public/grid.svg'
 import columnIcon from '@/../public/list.png'
-import MoreDetails from "./components/moreDetails";
-import imageContent from '@/../public/Rectangle 208.png';
-import './page.scss'
 import CardList from "./components/CardList";
 import data from '@/app/api/data.json'
 import DataTable from "./components/RecordList";
 import { useState } from "react";
 import { Container } from "@mui/material";
+import { formatDate } from "./utils/dateUtils";
+import './page.scss'
 
 export default function Home() {
   const [view, setView] = useState('list');
+  const [filteredData, setFilteredData] = useState(data);
 
   const changeView = (newView: string) => {
     setView(newView);
+  };
+
+  const handleSearch = (query: any) => {
+    const filtered = data.records.filter((item) => {
+      const dateFormated = formatDate(item.createdAt)
+      const titleMatches = item.metadata.title.toLowerCase().includes(query.toLowerCase());
+      const createdAtMatches = dateFormated.toLowerCase().includes(query.toLowerCase());
+      const statusMatches = item.status.toLowerCase().includes(query.toLowerCase());
+
+      return titleMatches || createdAtMatches || statusMatches;
+    });
+
+    setFilteredData({ records: filtered });
   };
 
   return (
@@ -31,6 +44,7 @@ export default function Home() {
         iconGrid={gridIcon}
         iconColumn={columnIcon}
         onChangeView={changeView}
+        onSearch={handleSearch}
       />
       {/* <MoreDetails
         image={imageContent}
@@ -41,13 +55,13 @@ export default function Home() {
       /> */}
 
 
-      <Container>
+      <Container className="container-data">
         {view === 'cards' ? (
           <CardList
-            data={data}
+            data={filteredData}
           />
         ) : (
-          <DataTable data={data} />
+          <DataTable data={filteredData} />
         )}
       </Container>
 

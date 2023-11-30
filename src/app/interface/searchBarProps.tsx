@@ -10,4 +10,5 @@ export interface searchBarProps {
     title:string
     width: number;
     onChangeView:any;
+    onSearch:any;
 }

@@ -15,15 +15,21 @@ export default function SearchBar({
     placeholder,
     iconGrid,
     iconColumn,
-    onChangeView
+    onChangeView,
+    onSearch
+
 }: searchBarProps) {
-    
     const [view, setView] = useState('list');
 
     const onClickView = ( nuevaVista:any) => {
         setView(nuevaVista);
     };
 
+    const handleInputChange = (e:any) => {
+        const inputValue = e.target.value;
+        onSearch(inputValue);
+    };
+    
     return (
         <section className='section-search-bar'>
             <div className='title-search'>
@@ -35,7 +41,7 @@ export default function SearchBar({
                         width={width}
                         height={height}
                     />
-                    <input className="input-field-search" type="search" placeholder={placeholder} />
+                    <input className="input-field-search" type="search" onChange={handleInputChange} placeholder={placeholder} />
                 </div>
             </div>
             <div className='images-order'>

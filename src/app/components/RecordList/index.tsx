@@ -5,6 +5,10 @@ import data from '@/app/api/data.json';
 import { Container } from '@mui/material';
 import './recordList.scss'
 import { formatDate } from '../../utils/dateUtils';
+import mintingImage from '@/../public/Minting.png';
+import draftImage from '@/../public/Draft.png';
+import certifiedImage from '@/../public/Artboard.png';
+import Image from 'next/image';
 
 const columns: GridColDef[] = [
   {
@@ -14,6 +18,7 @@ const columns: GridColDef[] = [
     headerAlign: 'right',
     headerName: 'Record Title',
     sortable: false,
+    
     width: 150,
     valueGetter: (params: GridValueGetterParams) =>
       `${params.row.metadata.image || ''}`, renderCell: (params) => <img width={52} height={43} src={params.value} alt={params.value} />,
@@ -21,15 +26,34 @@ const columns: GridColDef[] = [
   {
     field: 'title',
     headerName: '',
-    width: 750, 
-    sortable: false,
+    width: 750,
     valueGetter: (params: GridValueGetterParams) =>
       `${params.row.metadata.title || ''}`,
   },
-  { field: 'status', headerName: 'Status', width: 250 },
-  { field: 'createdAt', headerName: 'Date', width: 250, sortable: false,
+  {
+    field: 'status', headerName: 'Status', width: 250,
+    renderCell: (params) => {
+      let imageStatus = <Image width={32} height={36} src={certifiedImage} alt={'Certified image'} />;
+      if (params.row.status === 'minting') {
+        imageStatus = <Image width={35} height={31} src={mintingImage} alt={'Minting image'} />
+      }
+      if (params.row.status === 'draft') {
+        imageStatus = <Image width={35} height={31} src={draftImage} alt={'Draft image'} />
+      }
+      return (
+        <Container className='container-status-cell'>
+          {imageStatus}
+          <span>{params.row.status}</span>
+        </Container>
+      )
+    }
+
+  },
+  {
+    field: 'createdAt', headerName: 'Date', width: 250,
     valueGetter: (params: GridValueGetterParams) =>
-    `${formatDate(params.row.createdAt) || ''}`, },
+      `${formatDate(params.row.createdAt) || ''}`,
+  },
 ];
 
 export default function DataTable({ data }: any) {

@@ -3,4 +3,12 @@
     display: flex;
     flex-direction: column;
     margin-top: 77px;
+    .container-data{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

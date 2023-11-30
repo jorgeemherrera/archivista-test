@@ -34,7 +34,7 @@ export default function CardList({ data }: any) {
                     {item.metadata.title}
                   </Typography>
                   <Typography className='record-id' variant="body2" color="text.secondary">
-                    Eternal Record {formatDate(item.createdAt)}
+                    Eternal Record &middot; {formatDate(item.createdAt)}
                   </Typography>
                 </Container>
                 <Image
