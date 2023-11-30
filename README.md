@@ -63,7 +63,7 @@ Run the app in development mode:
 Run the unit tests using:
 
    ```bash
-   npm test
+   npm run test
    ``` 
 ### Usage
 
