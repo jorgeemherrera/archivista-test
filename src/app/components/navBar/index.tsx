@@ -81,6 +81,7 @@ export default function NavBar({
             alt={alt}
             width={width}
             height={height}
+            priority
           />
         </Link>
       </div>
