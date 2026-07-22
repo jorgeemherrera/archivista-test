@@ -1,6 +1,6 @@
 @import '../../variables/variables.colors';
 
-.card-container{
+.card-container.MuiContainer-root{
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
