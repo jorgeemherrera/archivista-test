@@ -21,7 +21,7 @@ export default function RootLayout({
   } 
   return (
     <html lang="en">
-      <body className={`${theme ?  "dark":"light"}`} suppressHydrationWarning>
+      <body className={`${inter.className} ${theme ? "dark" : "light"}`} suppressHydrationWarning>
         <NavBar
           image={logoImage}
           alt='alt'

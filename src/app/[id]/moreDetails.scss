@@ -1,3 +1,5 @@
+@import '../variables/variables.colors';
+
 .main-section-more-details{
     display: grid;
     grid-template-areas: 
@@ -14,7 +16,7 @@
     .record-box-certified{
         align-items: center;
         border-radius: 10px;
-        border: 2px dashed #000;
+        border: 2px dashed $font-black;
         display: flex;
         flex-direction: row;
         grid-area: record-box;
@@ -23,7 +25,7 @@
         max-height: 92px;
         padding: 23px 46px 22px 43px;
         .button-box-certified{
-            background-color: #000;
+            background-color: $font-black;
             height: 42px;
             padding: 10px 22px;
             text-transform: none;
@@ -81,11 +83,11 @@
     @media screen and (max-width: 830px) {
         .section-content {
             flex-direction: column;
-        }
-        .paragraph-content {
-            margin-bottom: 50px;
-            margin-right: 0 !important;
-            text-align: justify;
+            .paragraph-content {
+                margin-bottom: 50px;
+                margin-right: 0;
+                text-align: justify;
+            }
         }
     }
 }

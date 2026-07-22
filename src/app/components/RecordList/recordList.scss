@@ -2,9 +2,8 @@
 .container-table{
     padding: 0;
     margin: 0;
-    min-width: 1500px;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    overflow-x: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,10 +19,11 @@
     }
     .data-grid{
         border: 0;
-        background-color: $background-purple-table
+        background-color: $background-purple-table;
+        min-width: 1500px;
     }
     a{
-        color: black;
+        color: $font-black;
     }
     .date{
         color: $font-gray;

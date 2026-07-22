@@ -12,12 +12,10 @@ $background-purple-table: rgb(255, 255, 255);
 
 @mixin theme($light-theme: true) {
     @if $light-theme {
-        background: lighten($main-purple-primary, 100%);
-        background: lighten($background-purple-table, 100%);
-        color: darken($font-black, 100%);
+        background: $background-white;
+        color: $font-black;
     } @else {
-        background: darken($main-purple-primary, 100%);
-        background: darken($background-purple-table, 100%);
-        color: lighten($font-black, 100%);
+        background: $font-black;
+        color: $background-white;
     }
 }
